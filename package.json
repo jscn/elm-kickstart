@@ -1,0 +1,19 @@
+{
+  "name": "elm-kickstart",
+  "version": "0.0.1",
+  "description": "elm project skeletopn",
+  "main": "bundle.js",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "onchange": "^3.2.1"
+  },
+  "scripts": {
+    "build": "elm make ./Main.elm --output ./bundle.js",
+    "watch": "onchange './Main.elm' -- npm run build",
+    "serve": "browser-sync start --server --files './bundle.js'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run watch & npm run serve"
+  },
+  "author": "jscn",
+  "license": "ISC"
+}
